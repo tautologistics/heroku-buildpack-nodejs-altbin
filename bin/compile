@@ -80,11 +80,11 @@ install_bins() {
   local yarn_engine=$(read_json "$BUILD_DIR/node-alt.json" ".engines.yarn")
 
   if [ -n "$iojs_engine" ]; then
-    echo "engines.iojs (node.json):  $iojs_engine (iojs)"
+    echo "engines.iojs (package.json):  $iojs_engine (iojs)"
   else
-    echo "engines.node (node.json):  ${node_engine:-unspecified}"
+    echo "engines.node (package.json):  ${node_engine:-unspecified}"
   fi
-  echo "engines.npm (node.json):   ${npm_engine:-unspecified (use default)}"
+  echo "engines.npm (package.json):   ${npm_engine:-unspecified (use default)}"
   echo ""
 
   if [ -n "$iojs_engine" ]; then
