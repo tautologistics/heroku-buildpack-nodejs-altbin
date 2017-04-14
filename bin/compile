@@ -21,7 +21,7 @@ BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 
 mkdir -p "$BUILD_DIR/.heroku/node-alt/"
 cd $BUILD_DIR
-export PATH="$BUILD_DIR/.heroku/node-alt/bin:$BUILD_DIR/.heroku/yarn/bin":$PATH
+export PATH="$BUILD_DIR/.heroku/node/bin:$BUILD_DIR/.heroku/yarn/bin":$PATH
 
 LOG_FILE=$(mktemp -t node-build-log.XXXXX)
 echo "" > "$LOG_FILE"
