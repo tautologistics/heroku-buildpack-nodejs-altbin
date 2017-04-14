@@ -8,7 +8,7 @@ calculate_concurrency() {
   fi
 
   # We prepend the calculated value with a leading '0' so that other buildpacks
-  # can distinguish between a value set by the Node buildpack  and a value set 
+  # can distinguish between a value set by the Node buildpack  and a value set
   # by the user
   echo "0$concurrency"
 }
@@ -31,8 +31,8 @@ detect_memory() {
   esac
 }
 
-export PATH="$HOME/.heroku/node/bin:$HOME/.heroku/yarn/bin:$PATH:$HOME/bin:$HOME/node_modules/.bin"
-export NODE_HOME="$HOME/.heroku/node"
+export PATH="$HOME/.heroku/node-alt/bin:$HOME/.heroku/yarn/bin:$PATH:$HOME/bin:$HOME/node_modules/.bin"
+export NODE_HOME="$HOME/.heroku/node-alt"
 export NODE_ENV=${NODE_ENV:-production}
 
 export MEMORY_AVAILABLE=${MEMORY_AVAILABLE:-$(detect_memory 512)}
